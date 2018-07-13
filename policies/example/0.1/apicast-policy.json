@@ -1,0 +1,35 @@
+{
+  "$schema": "http://apicast.io/policy-v1/schema#manifest#",
+  "name": "Custom Policy #1",
+  "summary": "This is example #1",
+  "description": "Check out my configuration parameters",
+  "version": "0.1",
+  "configuration": {
+    "type": "object",
+    "properties": {
+      "string_input": {
+        "description": "Here is an input parameter to custom policy #1",
+        "type": "string"
+      },
+      "integer_input": {
+        "description": "Here is another input parameter to custom policy #1",
+        "type": "integer",
+        "default": 42
+      },
+      "dropdown_input": {
+        "type": "string",
+        "description": "Look, I'm a dropdown selector",
+        "oneOf": [
+          {
+            "enum": ["option_1"],
+            "description": "Option 1"
+          },
+          {
+            "enum": ["option_2"],
+            "description": "Option 2"
+          }
+        ]
+      }
+    }
+  }
+}
